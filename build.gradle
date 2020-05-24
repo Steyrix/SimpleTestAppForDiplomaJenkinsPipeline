@@ -5,7 +5,7 @@ buildscript {
 
     repositories {
         mavenCentral()
-        maven { url 'https://dl.bintray.com/qameta/maven' }
+        maven { url "https://dl.bintray.com/qameta/maven" }
         google()
         jcenter()
     }
@@ -20,6 +20,8 @@ buildscript {
 
 allprojects {
     repositories {
+        mavenCentral()
+        maven { url "https://dl.bintray.com/qameta/maven" }
         google()
         jcenter()
     }
