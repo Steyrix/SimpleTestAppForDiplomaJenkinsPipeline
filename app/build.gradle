@@ -6,14 +6,16 @@ apply plugin: 'kotlin-android-extensions'
 
 android {
     compileSdkVersion 28
+
     defaultConfig {
         applicationId "com.app.steyrix.simpletestapp"
         minSdkVersion 22
         targetSdkVersion 28
         versionCode 1
         versionName "1.0"
-        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner = "io.qameta.allure.espresso.AllureAndroidRunner"
     }
+
     buildTypes {
         release {
             minifyEnabled false
@@ -33,8 +35,18 @@ dependencies {
     implementation 'com.android.support:support-v13:28.0.0'
     implementation 'com.android.support:appcompat-v7:28.0.0'
     implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+
     testImplementation 'junit:junit:4.12'
+
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
     androidTestImplementation 'com.kaspersky.android-components:kaspresso:1.1.0'
+
+    androidTestImplementation 'io.qameta.allure:allure-android-commons:2.0.3'
+    androidTestImplementation 'io.qameta.allure:allure-android-model:2.0.3'
+    androidTestImplementation 'io.qameta.allure:allure-espresso:2.0.3'
+
+    androidTestImplementation 'org.jetbrains.kotlin:kotlin-stdlib:1.3.70'
+    androidTestImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.uiautomator:uiautomator:2.2.0'
 }
