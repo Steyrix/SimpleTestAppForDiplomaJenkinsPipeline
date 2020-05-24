@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">simpleTestApp</string>
+    <string name="hello_screen_value">This app is designed to test Jenkins Pipeline</string>
+    <string name="show_text_btn_hint">Show hidden text</string>
+    <string name="hide_text_btn_hint">Hide shown text</string>
+    <string name="show_wrong_btn_hint">Show wrong text</string>
+    <string name="hidden_text">This is hidden text, that can be shown by clicking on button</string>
+    <string name="wrong_text">This is WRONG text, that should fail the test</string>
+</resources>
