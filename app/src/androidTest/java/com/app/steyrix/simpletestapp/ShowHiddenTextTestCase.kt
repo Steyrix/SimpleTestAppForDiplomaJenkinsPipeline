@@ -14,28 +14,33 @@ class ShowHiddenTextTestCase : TestCase() {
     @Test
     fun showHiddenTextTest() =
         run {
-            step("1. Verify hello text is visible") {
-                activityTestRule.launchActivity(null)
 
-                MainScreen {
-                    helloTextView {
-                        isVisible()
+            io.qameta.allure.android.step("1. Убедиться, что приветственно сообщение показано") {
+                step("1. Убедиться, что приветственно сообщение показано") {
+                    activityTestRule.launchActivity(null)
+
+                    MainScreen {
+                        helloTextView {
+                            isVisible()
+                        }
                     }
                 }
             }
 
-            step("2. Click button and verify text and button text change") {
-                MainScreen {
-                    showTextBtn {
-                        hasText(R.string.show_text_btn_hint)
-                        isVisible()
-                        click()
-                        hasText(R.string.hide_text_btn_hint)
-                    }
+            io.qameta.allure.android.step("1. Убедиться, что приветственно сообщение показано") {
+                step("2. Нажать на кнопку и верифицировать ее состояние и показ текста") {
+                    MainScreen {
+                        showTextBtn {
+                            hasText(R.string.show_text_btn_hint)
+                            isVisible()
+                            click()
+                            hasText(R.string.hide_text_btn_hint)
+                        }
 
-                    hiddenTextView {
-                        isVisible()
-                        hasText(R.string.hidden_text)
+                        hiddenTextView {
+                            isVisible()
+                            hasText(R.string.hidden_text)
+                        }
                     }
                 }
             }
