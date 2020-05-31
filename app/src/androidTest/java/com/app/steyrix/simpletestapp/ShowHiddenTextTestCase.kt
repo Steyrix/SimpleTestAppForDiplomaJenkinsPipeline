@@ -15,8 +15,8 @@ class ShowHiddenTextTestCase : TestCase() {
     fun showHiddenTextTest() =
         run {
 
-            io.qameta.allure.android.step("1. Убедиться, что приветственно сообщение показано") {
-                step("1. Убедиться, что приветственно сообщение показано") {
+            io.qameta.allure.android.step("1. Убедиться, что приветственное сообщение показано") {
+                step("1. Убедиться, что приветственное сообщение показано") {
                     activityTestRule.launchActivity(null)
 
                     MainScreen {
@@ -27,7 +27,7 @@ class ShowHiddenTextTestCase : TestCase() {
                 }
             }
 
-            io.qameta.allure.android.step("1. Убедиться, что приветственно сообщение показано") {
+            io.qameta.allure.android.step("2. Нажать на кнопку и верифицировать ее состояние и показ текста") {
                 step("2. Нажать на кнопку и верифицировать ее состояние и показ текста") {
                     MainScreen {
                         showTextBtn {
