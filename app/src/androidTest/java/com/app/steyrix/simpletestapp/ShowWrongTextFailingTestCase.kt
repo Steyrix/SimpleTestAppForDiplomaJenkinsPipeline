@@ -12,7 +12,7 @@ class ShowWrongTextFailingTestCase : TestCase() {
     val activityTestRule = ActivityTestRule(MainActivity::class.java, true, false)
 
     @Test
-    fun showHiddenTextTest() =
+    fun showWrongTextFailingTestCase() =
         run {
             io.qameta.allure.android.step("1. Verify hello text is visible") {
                 step("1. Verify hello text is visible") {
